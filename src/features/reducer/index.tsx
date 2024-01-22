@@ -25,9 +25,12 @@ interface CalcState {
     decimalPlaces: string,
 }
 
+// obtenção do localStorage para verificação no state 'theme'
+const getTheme = localStorage.getItem('theme')
+
 // valor inicial de cada state
 const initialState: CalcState = {
-    theme: JSON.parse(localStorage.getItem('theme') || 'light') || 'light',
+    theme: getTheme !== null ? JSON.parse(getTheme) : 'light',
     headerDisplay: true,
     uniqueCalcs: [],
     compostCalcs: [],

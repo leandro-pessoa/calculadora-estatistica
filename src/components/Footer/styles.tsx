@@ -18,6 +18,13 @@ const StyledFooter = styled.footer`
     @media (max-width: ${variables.tablet}) {
         margin-bottom: 3rem;
     }
+    @media (max-width: ${variables.smartphone}) {
+        div {
+            span {
+                font-size: .9rem;
+            }
+        }
+    }
 `
 
 export { StyledFooter }
