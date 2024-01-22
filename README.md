@@ -18,10 +18,38 @@ Calculadora que realiza cálculos estatísticos como média, mediana, variância
 - `Cálculos`: Como dito acima, alguns cálculos estão disponíveis para a realização;
 - `Resultados`: Quando clicar em 'calcular', o usuário é redirecionado para os resultados, onde haverá um rol para cada lista e os cálculos realizados;
 
+## ☁️ Projeto na nuvem
+
+Acesse a aplicação no ar por [aqui](https://calculadora-estatistica-one.vercel.app).
+
 ## ⬇️ Download do projeto
 
+Clique em 'Download ZIP':
+![Clique em 'code' (botão verde) e depois em 'Download ZIP'](https://github.com/leandro-pessoa/calculadora-estatistica/assets/119120060/d3293b56-5f60-42d9-b594-b2bb3b38f497)
 
+## 🛠️ Executando o projeto
 
-## 🚧 Projeto quase finalizado 🚧
+Siga os seguintes passos:
+- Abra a pasta do projeto no terminal;
+- Rode os comandos:
+  ~~~~
+  npm install
+  ~~~~
+  ~~~~
+  npm run dev
+  ~~~~
+- Por fim, abra o link mostrado no seu navegador.
 
-Caso queira ver como está ficando, acesse [esse link](https://calculadora-estatistica-one.vercel.app).
+## ⚛️ Tecnologias utilizadas
+
+As principais tecnologias utilizadas foram:
+
+- `React`
+- `TypeScript`
+- `Redux`
+- `React router dom`
+- `Styled components`
+
+## :hurtrealbad: Desenvolvedor
+
+Desenvolvido por [Leandro Pessoa](https://github.com/leandro-pessoa).
