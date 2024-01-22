@@ -27,7 +27,7 @@ interface CalcState {
 
 // valor inicial de cada state
 const initialState: CalcState = {
-    theme: JSON.parse(localStorage.getItem('theme') || 'light'),
+    theme: JSON.parse(localStorage.getItem('theme') || 'light') || 'light',
     headerDisplay: true,
     uniqueCalcs: [],
     compostCalcs: [],
