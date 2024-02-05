@@ -1,8 +1,8 @@
 // funções
-import styled from "styled-components"
+import styled from 'styled-components'
 
 // variáveis
-import { flex, variables } from "@/variables"
+import { flex, variables } from '@/variables'
 
 // tipagens
 interface PProps {
@@ -14,7 +14,7 @@ const list = `
     list-style: none;
     display: grid;
     gap: .5rem;
-`   
+`
 
 const height = `
     max-height: 200px;
@@ -23,14 +23,14 @@ const height = `
 
 const StyledUniqueDiv = styled.div`
     ::-webkit-scrollbar-track {
-        background-color: ${props => props.theme.colors.secondaryBgColor};
+        background-color: ${(props) => props.theme.colors.secondaryBgColor};
     }
 
     .unique__clear-all {
         ${flex('row', 'flex-end')}
         margin-top: .5rem;
     }
-    
+
     .unique-list {
         ${list}
         ${height}
@@ -53,14 +53,14 @@ const StyledCompostDiv = styled.div`
     ${flex('row', 'space-between', 'flex-start', '1.5rem')}
 
     ::-webkit-scrollbar-track {
-        background-color: ${props => props.theme.colors.secondaryBgColor};
+        background-color: ${(props) => props.theme.colors.secondaryBgColor};
     }
 
     p {
         display: none;
         margin-top: 1rem;
     }
-    
+
     .compost-list {
         ${list}
         width: 50%;
@@ -76,7 +76,7 @@ const StyledCompostDiv = styled.div`
 
         .compost-list {
             width: 100%;
-            margin-top: .5rem;
+            margin-top: 0.5rem;
         }
     }
 `
@@ -86,7 +86,7 @@ const StyledP = styled.p<PProps>`
     margin-bottom: 1rem;
     text-align: center;
     font-size: 1.2rem;
-    width: ${props => props.$width};
+    width: ${(props) => props.$width};
 
     @media (max-width: ${variables.smartphone}) {
         font-size: 1.1rem;

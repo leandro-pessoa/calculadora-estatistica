@@ -33,7 +33,7 @@ const StyledDiv = styled.div`
             left: 0;
             height: 25px;
             width: 25px;
-            background-color: ${props => props.theme.colors.terciaryBgColor};
+            background-color: ${(props) => props.theme.colors.terciaryBgColor};
 
             &::after {
                 content: '';
@@ -52,12 +52,12 @@ const StyledDiv = styled.div`
         }
 
         &:hover input ~ span {
-            background-color: ${props => props.theme.colors.bgColor};
+            background-color: ${(props) => props.theme.colors.bgColor};
         }
 
         input:checked ~ span {
             background-color: ${variables.green};
-        }  
+        }
 
         input:checked ~ span:after {
             display: block;
@@ -71,7 +71,7 @@ const StyledDiv = styled.div`
     }
     @media (max-width: ${variables.smartphone}) {
         label {
-            font-size: .9rem;
+            font-size: 0.9rem;
             height: 20px;
 
             span {

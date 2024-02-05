@@ -1,4 +1,4 @@
 export interface INumber {
-    id: string,
+    id: string
     num: number | string
 }

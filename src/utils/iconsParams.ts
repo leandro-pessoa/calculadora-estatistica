@@ -1,16 +1,16 @@
 // funções
-import { useAppSelector } from "@/features/hooks"
+import { useAppSelector } from '@/features/hooks'
 
 // variáveis
-import { variables } from "@/variables"
+import { variables } from '@/variables'
 
 const iconsParams = (size: number) => {
     // states globais
-    const actualTheme = useAppSelector(state => state.calc.theme)
+    const actualTheme = useAppSelector((state) => state.calc.theme)
 
     return {
         size: size,
-        color: actualTheme === 'dark' ? variables.white : variables.darkGray
+        color: actualTheme === 'dark' ? variables.white : variables.darkGray,
     }
 }
 

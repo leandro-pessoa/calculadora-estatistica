@@ -1,8 +1,8 @@
 // funções
-import styled from "styled-components"
+import styled from 'styled-components'
 
 // variáveis
-import { flex, variables } from "@/variables"
+import { flex, variables } from '@/variables'
 
 const StyledSection = styled.section`
     ${flex('column', 'center', 'center', '2rem')}
@@ -22,8 +22,8 @@ const StyledSection = styled.section`
         font-size: 1.2rem;
         color: ${variables.white};
         font-family: ${variables.primaryFont};
-        padding: .5rem 1rem;
-        transition: ease .2s;
+        padding: 0.5rem 1rem;
+        transition: ease 0.2s;
 
         &:hover {
             cursor: pointer;

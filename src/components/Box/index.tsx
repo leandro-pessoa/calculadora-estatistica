@@ -7,16 +7,14 @@ import Title from '../Title'
 
 // tipagem dos props
 interface CalcsProps {
-    title: ReactElement | string,
+    title: ReactElement | string
     children: ReactElement | ReactElement[] | string
 }
 
 const Box = ({ title, children }: CalcsProps) => {
     return (
         <StyledDiv>
-            <Title fontSize='1.5rem'>
-                {title}
-            </Title>
+            <Title fontSize='1.5rem'>{title}</Title>
             {children}
         </StyledDiv>
     )

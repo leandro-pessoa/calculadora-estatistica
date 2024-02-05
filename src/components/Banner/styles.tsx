@@ -46,12 +46,13 @@ const StyledSection = styled.section`
 `
 
 const StyledDiv = styled.div`
-    background: url(${props  => props.theme.images.bannerImg}) no-repeat center top;
+    background: url(${(props) => props.theme.images.bannerImg}) no-repeat center
+        top;
     background-size: cover;
     height: 100%;
     width: 60%;
     border-radius: 8px;
-    box-shadow: 5px 5px 10px rgba(0,0,0,0.15);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
 
     @media (max-width: ${variables.smartphone}) {
         width: 100%;

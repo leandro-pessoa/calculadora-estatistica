@@ -1,9 +1,5 @@
 // funções
-import {
-    covariancia,
-    correlacao,
-    regressaoLinear
-} from '@/utils/compostCalcs'
+import { covariancia, correlacao, regressaoLinear } from '@/utils/compostCalcs'
 import { obj } from './calcsUtils'
 
 // tipagens externas
@@ -15,20 +11,22 @@ const selectCompostCalc = (calcs: string[], x: INumber[], y: INumber[]) => {
     const results: IResults['numbers'] = []
 
     // arrays com somente os números (sem id)
-    const xOnly = x.map(num => Number(num.num))
-    const yOnly = y.map(num => Number(num.num))
-
+    const xOnly = x.map((num) => Number(num.num))
+    const yOnly = y.map((num) => Number(num.num))
 
     calcs.forEach((calc) => {
-        if(calc === 'Covariância') {
+        if (calc === 'Covariância') {
             results.push(obj('Covariância', covariancia(xOnly, yOnly)))
         }
-        if(calc === 'Correlação') {
+        if (calc === 'Correlação') {
             results.push(obj('Correlação', correlacao(xOnly, yOnly)))
         }
-        if(calc === 'Regressão linear') {
-            results.push({calcName: 'Regressão linear', regressao: regressaoLinear(xOnly, yOnly)})
-        }   
+        if (calc === 'Regressão linear') {
+            results.push({
+                calcName: 'Regressão linear',
+                regressao: regressaoLinear(xOnly, yOnly),
+            })
+        }
     })
 
     return results

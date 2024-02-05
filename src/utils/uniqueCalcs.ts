@@ -1,4 +1,4 @@
-import { somatorio } from "./calcsUtils"
+import { somatorio } from './calcsUtils'
 
 const mediaAritmetica = (array: number[]) => {
     return somatorio(array) / array.length
@@ -15,8 +15,7 @@ const mediana = (array: number[]) => {
         const value2 = array[array.length / 2]
         const values = [value1, value2]
         return mediaAritmetica(values)
-    }
-    else {
+    } else {
         const value = array[Math.floor(array.length / 2)]
         return value
     }
@@ -24,14 +23,17 @@ const mediana = (array: number[]) => {
 
 const amplitude = (array: number[]) => {
     const first = array[0]
-    const last = (array.reverse())[0]
+    const last = array.reverse()[0]
     return last - first
 }
 
 const variancia = (array: number[]) => {
     const n = array.length
     const media = mediaAritmetica(array)
-    const somatorio = array.reduce((acc, value) => Math.abs(Math.pow(value - media, 2)) + acc, 0)
+    const somatorio = array.reduce(
+        (acc, value) => Math.abs(Math.pow(value - media, 2)) + acc,
+        0,
+    )
     return somatorio / n
 }
 
@@ -46,23 +48,23 @@ const moda = (array: number[]) => {
     const result = []
 
     // encontrando a moda
-    for(let i in array) {
+    for (let i in array) {
         freq[array[i]] = (freq[array[i]] || 0) + 1
-        if(freq[array[i]] > maxFreq) {
+        if (freq[array[i]] > maxFreq) {
             maxFreq = freq[array[i]]
         }
     }
-    for(let j in freq) {
-        if(freq[j] == maxFreq && maxFreq > 1) {
+    for (let j in freq) {
+        if (freq[j] == maxFreq && maxFreq > 1) {
             result.push(Number(j))
         }
     }
-    if(!result[0]) {
+    if (!result[0]) {
         return 'inexistente'
     }
 
     return result
-}   
+}
 
 export {
     mediaAritmetica,
@@ -71,5 +73,5 @@ export {
     amplitude,
     variancia,
     desvioPadrao,
-    moda
+    moda,
 }

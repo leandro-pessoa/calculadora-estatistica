@@ -2,7 +2,7 @@
 import styled from 'styled-components'
 
 // variáveis
-import { variables, flex } from "@/variables"
+import { variables, flex } from '@/variables'
 
 // tipagens
 interface HeaderProps {
@@ -11,15 +11,15 @@ interface HeaderProps {
 
 const StyledHeader = styled.header<HeaderProps>`
     position: relative;
-    padding: ${props => props.$display ? '2rem' : '0'} 3rem;
-    border-bottom: 1px solid ${props => props.theme.colors.borderColor};
+    padding: ${(props) => (props.$display ? '2rem' : '0')} 3rem;
+    border-bottom: 1px solid ${(props) => props.theme.colors.borderColor};
     margin-bottom: 3rem;
-    height: ${props => props.$display ? 'auto' : '0px'};
-    transition: ease .3s;
-    
+    height: ${(props) => (props.$display ? 'auto' : '0px')};
+    transition: ease 0.3s;
+
     .container {
         ${flex('row', 'space-between', 'center')}
-        display: ${props => props.$display ? 'flex' : 'none'};
+        display: ${(props) => (props.$display ? 'flex' : 'none')};
         .container__title {
             ${flex('row', 'flex-start', 'center', '1rem')}
             font-size: 3rem;
@@ -36,7 +36,7 @@ const StyledHeader = styled.header<HeaderProps>`
     }
 
     @media (max-width: ${variables.notebook}) {
-        padding: ${props => props.$display ? '2rem' : '0'} 1rem;
+        padding: ${(props) => (props.$display ? '2rem' : '0')} 1rem;
         .container {
             .container__title {
                 font-size: 2.5rem;
@@ -59,7 +59,7 @@ const StyledHeader = styled.header<HeaderProps>`
     }
 
     @media (max-width: ${variables.smallSmartphone}) {
-        padding: ${props => props.$display ? '1rem' : '0'} 1rem;
+        padding: ${(props) => (props.$display ? '1rem' : '0')} 1rem;
 
         .container {
             div {

@@ -5,7 +5,7 @@ import iconsParams from '@/utils/iconsParams'
 import { StyledFooter } from './styles'
 
 // ícones
-import { FaGithub } from "react-icons/fa"
+import { FaGithub } from 'react-icons/fa'
 
 const Footer = () => {
     return (
@@ -14,8 +14,12 @@ const Footer = () => {
                 <span>Desenvolvido por Leandro Pessoa</span>
             </div>
             <div>
-                <a href="https://github.com/leandro-pessoa" target='_blank' rel='external'>
-                    <FaGithub {...iconsParams(24)}/>
+                <a
+                    href='https://github.com/leandro-pessoa'
+                    target='_blank'
+                    rel='external'
+                >
+                    <FaGithub {...iconsParams(24)} />
                 </a>
             </div>
         </StyledFooter>

@@ -1,8 +1,8 @@
 // funções
-import styled from "styled-components"
+import styled from 'styled-components'
 
 // variáveis
-import { flex, variables } from "@/variables"
+import { flex, variables } from '@/variables'
 
 // tipagens
 interface NavProps {
@@ -15,11 +15,13 @@ const StyledNav = styled.nav<NavProps>`
     }
 
     @media (max-width: ${variables.notebook}) {
-        display: ${props => props.$position === 'header' ? 'block' : 'none'};
+        display: ${(props) =>
+            props.$position === 'header' ? 'block' : 'none'};
     }
 
     @media (max-width: ${variables.tablet}) {
-        display: ${props => props.$position === 'header' ? 'none' : 'block'};
+        display: ${(props) =>
+            props.$position === 'header' ? 'none' : 'block'};
     }
 `
 

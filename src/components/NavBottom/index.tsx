@@ -1,12 +1,12 @@
 // componentes
-import { StyledDiv } from "./styles"
-import Nav from "../Nav"
+import { StyledDiv } from './styles'
+import Nav from '../Nav'
 
 const NavBottom = () => {
     return (
         <StyledDiv>
-            <Nav position="bottom"/>
-        </StyledDiv>    
+            <Nav position='bottom' />
+        </StyledDiv>
     )
 }
 

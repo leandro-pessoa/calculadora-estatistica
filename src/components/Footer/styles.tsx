@@ -1,8 +1,8 @@
 // funções
-import styled from "styled-components"
+import styled from 'styled-components'
 
 // variáveis
-import { flex, variables } from "@/variables"
+import { flex, variables } from '@/variables'
 
 const StyledFooter = styled.footer`
     ${flex('row', 'space-around', 'center')}
@@ -21,7 +21,7 @@ const StyledFooter = styled.footer`
     @media (max-width: ${variables.smartphone}) {
         div {
             span {
-                font-size: .9rem;
+                font-size: 0.9rem;
             }
         }
     }

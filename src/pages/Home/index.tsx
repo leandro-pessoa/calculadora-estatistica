@@ -1,14 +1,14 @@
 // componentes
-import Banner from "@/components/Banner"
-import Footer from "@/components/Footer"
-import HowToUse from "@/components/HowToUse"
+import Banner from '@/components/Banner'
+import Footer from '@/components/Footer'
+import HowToUse from '@/components/HowToUse'
 
 const Home = () => {
     return (
-        <>  
-            <Banner/>
-            <HowToUse/>
-            <Footer/>
+        <>
+            <Banner />
+            <HowToUse />
+            <Footer />
         </>
     )
 }

@@ -1,14 +1,14 @@
 // funções
-import { configureStore } from "@reduxjs/toolkit"
+import { configureStore } from '@reduxjs/toolkit'
 
 // reducer
-import { CalcReducer } from "../reducer"
+import { CalcReducer } from '../reducers'
 
 // declaração da store
 export const store = configureStore({
     reducer: {
-        calc: CalcReducer
-    }
+        calc: CalcReducer,
+    },
 })
 
 // export de tipos referentes à store

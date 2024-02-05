@@ -1,8 +1,8 @@
 // funções
-import { createGlobalStyle } from "styled-components"
+import { createGlobalStyle } from 'styled-components'
 
 // variáveis
-import { variables } from "@/variables"
+import { variables } from '@/variables'
 
 const GlobalStyles = createGlobalStyle`
     html, body, div, span, applet, object, iframe,
@@ -33,8 +33,8 @@ const GlobalStyles = createGlobalStyle`
     body {
         line-height: 1;
         font-family: ${variables.primaryFont};
-        background-color: ${props => props.theme.colors.bgColor};
-        color: ${props => props.theme.colors.primaryFontColor};
+        background-color: ${(props) => props.theme.colors.bgColor};
+        color: ${(props) => props.theme.colors.primaryFontColor};
     }
     ol, ul {
         list-style: none;
@@ -71,7 +71,7 @@ const GlobalStyles = createGlobalStyle`
         width: 7px;
     }
     ::-webkit-scrollbar-track {
-        background-color: ${props => props.theme.colors.bgColor};
+        background-color: ${(props) => props.theme.colors.bgColor};
         
     }
     ::-webkit-scrollbar-thumb {

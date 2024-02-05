@@ -1,8 +1,8 @@
 // funções
-import { DefaultTheme } from "styled-components"
+import { DefaultTheme } from 'styled-components'
 
 // variáveis
-import { variables } from "@/variables"
+import { variables } from '@/variables'
 
 // imagens
 import bannerLight from '/imagens/estatistica-banner-light.jpg'
@@ -17,8 +17,8 @@ const lightTheme: DefaultTheme = {
         borderColor: variables.lightGray,
     },
     images: {
-        bannerImg: bannerLight
-    }
+        bannerImg: bannerLight,
+    },
 }
 
 const darkTheme: DefaultTheme = {
@@ -30,8 +30,8 @@ const darkTheme: DefaultTheme = {
         borderColor: variables.regularGray,
     },
     images: {
-        bannerImg: bannerDark
-    }
-} 
+        bannerImg: bannerDark,
+    },
+}
 
 export { darkTheme, lightTheme }

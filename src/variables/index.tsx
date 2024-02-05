@@ -1,4 +1,3 @@
-
 const variables = {
     // fontes
     primaryFont: '"Montserrat", sans-serif',
@@ -24,10 +23,15 @@ const variables = {
     notebook: '1024px',
     tablet: '869px',
     smartphone: '669px',
-    smallSmartphone: '400px' 
+    smallSmartphone: '400px',
 }
 
-const flex = (direction?: string, justify?: string, align?: string, gap?: string): string => {
+const flex = (
+    direction?: string,
+    justify?: string,
+    align?: string,
+    gap?: string,
+): string => {
     return `
         display: flex;
         flex-direction: ${direction};

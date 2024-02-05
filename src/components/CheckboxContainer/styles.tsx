@@ -1,8 +1,8 @@
 // funções
-import styled from "styled-components"
+import styled from 'styled-components'
 
 // variáveis
-import { variables } from "@/variables"
+import { variables } from '@/variables'
 
 const StyledDiv = styled.div`
     display: grid;

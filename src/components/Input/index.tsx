@@ -1,20 +1,20 @@
 // componentes
-import { StyledInput } from "./styles"
+import { StyledInput } from './styles'
 
 // tipagens externas
-import { IInputChange } from "@/shared/interfaces/IInputChange"
+import { IInputChange } from '@/shared/interfaces/IInputChange'
 
 // tipagem dos props
 interface InputProps {
-    placeholder: string,
-    type?: string,
-    value: string | number,
+    placeholder: string
+    type?: string
+    value: string | number
     onChange: IInputChange['change']
     onKeyDown?: (e: React.KeyboardEvent<HTMLInputElement>) => void
-    id?: string,
-    margin?: string,
+    id?: string
+    margin?: string
     min?: number
-    max?: number,
+    max?: number
     maxLength?: number
 }
 

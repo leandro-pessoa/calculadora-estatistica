@@ -1,8 +1,8 @@
- // funções
- import { ReactElement } from "react"
+// funções
+import { ReactElement } from 'react'
 
 // componentes
-import { StyledDiv } from "./styles"
+import { StyledDiv } from './styles'
 
 // tipagem dos props
 interface CheckboxContainerProps {
@@ -10,11 +10,7 @@ interface CheckboxContainerProps {
 }
 
 const CheckboxContainer = ({ children }: CheckboxContainerProps) => {
-    return (
-        <StyledDiv>
-            {children}
-        </StyledDiv>
-    )
+    return <StyledDiv>{children}</StyledDiv>
 }
 
 export default CheckboxContainer

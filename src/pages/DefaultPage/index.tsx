@@ -1,14 +1,14 @@
 // componentes
-import { Outlet } from "react-router-dom"
+import { Outlet } from 'react-router-dom'
 import Header from '@/components/Header'
-import NavBottom from "@/components/NavBottom"
+import NavBottom from '@/components/NavBottom'
 
 const DefaultPage = () => {
     return (
         <>
-            <Header/>
-            <Outlet/>
-            <NavBottom/>
+            <Header />
+            <Outlet />
+            <NavBottom />
         </>
     )
 }

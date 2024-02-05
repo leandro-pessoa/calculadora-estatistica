@@ -1,8 +1,8 @@
 // funções
-import styled from "styled-components"
+import styled from 'styled-components'
 
 // variáveis
-import { variables } from "@/variables"
+import { variables } from '@/variables'
 
 // tipagens
 interface InputProps {
@@ -10,22 +10,22 @@ interface InputProps {
 }
 
 const StyledInput = styled.input<InputProps>`
-    background-color: ${props => props.theme.colors.bgColor};
+    background-color: ${(props) => props.theme.colors.bgColor};
     border: none;
     width: calc(100% - 2rem);
-    padding: .5rem 1rem;
+    padding: 0.5rem 1rem;
     font-size: 1.1rem;
-    color: ${props => props.theme.colors.primaryFontColor};
-    box-shadow: inset 2px 2px 5px rgba(0,0,0,0.05);
+    color: ${(props) => props.theme.colors.primaryFontColor};
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.05);
     font-family: ${variables.primaryFont};
-    margin: ${props => props.$margin};
+    margin: ${(props) => props.$margin};
 
     &:focus {
         outline: 2px solid ${variables.lightBlue};
     }
 
     @media (max-width: ${variables.smartphone}) {
-        font-size: .9rem;
+        font-size: 0.9rem;
     }
 `
 

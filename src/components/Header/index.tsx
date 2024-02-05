@@ -1,34 +1,34 @@
 // funções
-import { useAppSelector } from "@/features/hooks"
+import { useAppSelector } from '@/features/hooks'
 
 // componentes
-import { StyledHeader } from "./styles"
-import ThemeButton from "../ThemeButton"
-import HeaderSwapButton from "../HeaderSwapButton"
-import Nav from "../Nav"
+import { StyledHeader } from './styles'
+import ThemeButton from '../ThemeButton'
+import HeaderSwapButton from '../HeaderSwapButton'
+import Nav from '../Nav'
 
 // ícones
-import { FcCalculator } from "react-icons/fc"
+import { FcCalculator } from 'react-icons/fc'
 
 const Header = () => {
     // states globais
-    const headerDisplay = useAppSelector(state => state.calc.headerDisplay)
+    const headerDisplay = useAppSelector((state) => state.calc.headerDisplay)
 
     return (
         <StyledHeader $display={headerDisplay}>
-            <div className="container">
-                <div className="container__title">
-                    <FcCalculator/>
+            <div className='container'>
+                <div className='container__title'>
+                    <FcCalculator />
                     <h1>
                         Calculadora <span>estatística</span>
                     </h1>
                 </div>
-                <Nav position="header"/>
+                <Nav position='header' />
                 <div>
-                    <ThemeButton/>
+                    <ThemeButton />
                 </div>
             </div>
-            <HeaderSwapButton/>
+            <HeaderSwapButton />
         </StyledHeader>
     )
 }

@@ -1,12 +1,12 @@
 // tipagens externas
-import { IButtonAction } from "@/shared/interfaces/IButtonAction"
+import { IButtonAction } from '@/shared/interfaces/IButtonAction'
 
 // componentes
-import { StyledDiv } from "./styles"
-import Button from "@/components/Button"
+import { StyledDiv } from './styles'
+import Button from '@/components/Button'
 
 // variáveis
-import { variables } from "@/variables"
+import { variables } from '@/variables'
 
 // tipagem dos props
 interface ClearAllProps {
@@ -19,7 +19,7 @@ const ClearAll = ({ action }: ClearAllProps) => {
             <Button
                 action={action}
                 bgColor={variables.lightRed}
-                padding=".5rem"
+                padding='.5rem'
             >
                 Limpar tudo
             </Button>

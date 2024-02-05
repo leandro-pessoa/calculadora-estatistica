@@ -1,28 +1,28 @@
 // funções e tipagens
-import { createSlice } from "@reduxjs/toolkit"
-import { PayloadAction } from "@reduxjs/toolkit"
-import { INumber } from "@/shared/interfaces/INumber"
-import { IResults } from "@/shared/interfaces/IResults"
-import selectUniqueCalc from "@/utils/selectUniqueCalc"
-import { edit, removeNumber, toggleCalc } from "@/utils/numbersActions"
-import { numberOnly } from "@/utils/calcsUtils"
-import selectCompostCalc from "@/utils/selectCompostCalcs"
+import { createSlice } from '@reduxjs/toolkit'
+import { PayloadAction } from '@reduxjs/toolkit'
+import { INumber } from '@/shared/interfaces/INumber'
+import { IResults } from '@/shared/interfaces/IResults'
+import selectUniqueCalc from '@/utils/selectUniqueCalc'
+import { edit, removeNumber, toggleCalc } from '@/utils/numbersActions'
+import { numberOnly } from '@/utils/calcsUtils'
+import selectCompostCalc from '@/utils/selectCompostCalcs'
 
 // tipagem dos states
 interface CalcState {
-    theme: string,
-    headerDisplay: boolean,
-    uniqueCalcs: string[],
-    compostCalcs: string[],
-    inputUniqueValue: number | string,
-    inputXValue: number | string,
+    theme: string
+    headerDisplay: boolean
+    uniqueCalcs: string[]
+    compostCalcs: string[]
+    inputUniqueValue: number | string
+    inputXValue: number | string
     inputYValue: number | string
-    uniqueNumbers: INumber[],
-    xNumbers: INumber[],
-    yNumbers: INumber[],
+    uniqueNumbers: INumber[]
+    xNumbers: INumber[]
+    yNumbers: INumber[]
     uniqueResults: IResults
-    compostResults: IResults,
-    decimalPlaces: string,
+    compostResults: IResults
+    decimalPlaces: string
 }
 
 // obtenção do localStorage para verificação no state 'theme'
@@ -41,10 +41,10 @@ const initialState: CalcState = {
     xNumbers: [],
     yNumbers: [],
     uniqueResults: {
-        numbers: []
+        numbers: [],
     },
     compostResults: {
-        numbers: []
+        numbers: [],
     },
     decimalPlaces: '2',
 }
@@ -55,12 +55,12 @@ const calcSlice = createSlice({
     initialState,
     reducers: {
         // alterna entre os temas
-        toggleTheme: state => {
+        toggleTheme: (state) => {
             state.theme = state.theme === 'dark' ? 'light' : 'dark'
         },
 
         // alterna o display do header
-        swapHeader: state => {
+        swapHeader: (state) => {
             state.headerDisplay = !state.headerDisplay
         },
 
@@ -102,10 +102,13 @@ const calcSlice = createSlice({
             }
             state.inputYValue = ''
         },
-       
+
         // remove um número do array especificado
         removeUniqueNumber: (state, action: PayloadAction<string>) => {
-            state.uniqueNumbers = removeNumber(state.uniqueNumbers, action.payload)
+            state.uniqueNumbers = removeNumber(
+                state.uniqueNumbers,
+                action.payload,
+            )
         },
         removeXNumber: (state, action: PayloadAction<string>) => {
             state.xNumbers = removeNumber(state.xNumbers, action.payload)
@@ -128,33 +131,47 @@ const calcSlice = createSlice({
         },
 
         // realiza os cálculos de acordo com o que foi selecionado nas checkboxes
-        calculateUnique: state => {
-            state.uniqueResults.numbers = selectUniqueCalc(state.uniqueCalcs, state.uniqueNumbers)   
+        calculateUnique: (state) => {
+            state.uniqueResults.numbers = selectUniqueCalc(
+                state.uniqueCalcs,
+                state.uniqueNumbers,
+            )
             state.uniqueResults.rol = numberOnly(state.uniqueNumbers)
         },
-        calculateCompost: state => {
+        calculateCompost: (state) => {
             state.compostResults.rolX = numberOnly(state.xNumbers)
             state.compostResults.rolY = numberOnly(state.yNumbers)
-            state.compostResults.numbers = selectCompostCalc(state.compostCalcs, state.xNumbers, state.yNumbers)
+            state.compostResults.numbers = selectCompostCalc(
+                state.compostCalcs,
+                state.xNumbers,
+                state.yNumbers,
+            )
         },
 
         decimalPlacesHandle: (state, action: PayloadAction<string>) => {
             state.decimalPlaces = action.payload
         },
 
-        // action voltada à alteração de números da lista  
-        editNumber: (state, action: PayloadAction<{id: string, value: string, array: string}>) => {
-            if(action.payload.array === 'unique'){
-                edit(state.uniqueNumbers, action.payload.id, action.payload.value)
+        // action voltada à alteração de números da lista
+        editNumber: (
+            state,
+            action: PayloadAction<{ id: string; value: string; array: string }>,
+        ) => {
+            if (action.payload.array === 'unique') {
+                edit(
+                    state.uniqueNumbers,
+                    action.payload.id,
+                    action.payload.value,
+                )
             }
-            if(action.payload.array === 'x'){
+            if (action.payload.array === 'x') {
                 edit(state.xNumbers, action.payload.id, action.payload.value)
             }
-            if(action.payload.array === 'y'){
+            if (action.payload.array === 'y') {
                 edit(state.yNumbers, action.payload.id, action.payload.value)
             }
-        }
-    }
+        },
+    },
 })
 
 // exports das actions e do reducer
@@ -176,7 +193,6 @@ export const {
     calculateUnique,
     calculateCompost,
     decimalPlacesHandle,
-    editNumber
+    editNumber,
 } = calcSlice.actions
 export const CalcReducer = calcSlice.reducer
-

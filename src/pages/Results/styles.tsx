@@ -1,8 +1,8 @@
 // funções
-import styled from "styled-components"
+import styled from 'styled-components'
 
 // variáveis
-import { flex, variables } from "@/variables"
+import { flex, variables } from '@/variables'
 
 const StyledDiv = styled.div`
     ${flex('column', 'center', 'center')}
@@ -56,13 +56,13 @@ const StyledCalcsUl = styled.ul`
 
         span {
             color: ${variables.green};
-            margin-right: .5rem;
+            margin-right: 0.5rem;
             font-weight: 600;
         }
 
         p {
             display: inline;
-            margin-right: .5rem;
+            margin-right: 0.5rem;
 
             &::after {
                 content: ',';
@@ -87,7 +87,7 @@ const StyledCalcsUl = styled.ul`
     }
     @media (max-width: ${variables.smallSmartphone}) {
         li {
-            font-size: .8rem;
+            font-size: 0.8rem;
         }
     }
 `
@@ -101,9 +101,4 @@ const StyledP = styled.p`
     }
 `
 
-export {
-    StyledDiv,
-    StyledRolUl,
-    StyledCalcsUl,
-    StyledP
-}
+export { StyledDiv, StyledRolUl, StyledCalcsUl, StyledP }

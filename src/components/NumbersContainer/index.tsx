@@ -1,7 +1,7 @@
 // componentes
-import Box from "../Box"
-import NumbersList from "./NumbersList"
-import InputContainer from "./InputContainer"
+import Box from '../Box'
+import NumbersList from './NumbersList'
+import InputContainer from './InputContainer'
 
 // tipagem dos props
 interface NumbersContainerProps {
@@ -11,8 +11,8 @@ interface NumbersContainerProps {
 const NumbersContainer = ({ mode }: NumbersContainerProps) => {
     return (
         <Box title='Números'>
-            <NumbersList mode={mode}/>
-            <InputContainer mode={mode}/>
+            <NumbersList mode={mode} />
+            <InputContainer mode={mode} />
         </Box>
     )
 }

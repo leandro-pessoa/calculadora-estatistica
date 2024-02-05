@@ -12,7 +12,7 @@ interface H2Props {
 const StyledH2 = styled.h2<H2Props>`
     padding-bottom: 1rem;
     width: 50%;
-    font-size: ${props => props.$fontSize};
+    font-size: ${(props) => props.$fontSize};
     font-weight: 600;
     border-bottom: 2px solid ${variables.green};
 
@@ -28,4 +28,4 @@ const StyledH2 = styled.h2<H2Props>`
     }
 `
 
-export { StyledH2 } 
+export { StyledH2 }

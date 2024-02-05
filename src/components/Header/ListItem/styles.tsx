@@ -6,7 +6,7 @@ import styled from 'styled-components'
 import { variables } from '@/variables'
 
 const StyledLi = styled.li`
-    transition: ease .2s;
+    transition: ease 0.2s;
     &:hover {
         cursor: pointer;
         transform: translate(1px, 1px);
@@ -28,10 +28,10 @@ const StyledLi = styled.li`
 `
 
 const StyledNavLink = styled(NavLink)`
-    color: ${props => props.theme.colors.primaryFontColor};
+    color: ${(props) => props.theme.colors.primaryFontColor};
     text-decoration: none;
     font-weight: 400;
-    
+
     &.active {
         font-weight: 600;
         color: ${variables.green};

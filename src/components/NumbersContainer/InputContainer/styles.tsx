@@ -1,8 +1,8 @@
 // funções
-import styled from "styled-components"
+import styled from 'styled-components'
 
 // variáveis
-import { flex, variables } from "@/variables"
+import { flex, variables } from '@/variables'
 
 const StyledDiv = styled.div`
     ${flex('row', 'auto', 'auto', '.5rem')}
